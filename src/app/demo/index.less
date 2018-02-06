@@ -1,0 +1,36 @@
+/*第一步导入 less文件 */ 
+@import '~@uyun/everest-styles/index';
+/* 
+  这样我们可以去调用我们常用的 mixin和变量啦。
+  比如 .themes() 换肤方法
+       .ellipsis() 文字超出显示点点方法
+*/
+
+.themes();
+/*
+  这时候会报错 No matching definition was found for `.blue()`
+             No matching definition was found for `.white()` 
+            .index is undefined
+
+  分别创建 4个 less方法  
+*/
+
+.blue() {
+  /*蓝色主题*/
+  @uy-steps-head-inner-border-color:  #108ee9;
+}  
+
+.white() {
+   /*白色主题*/
+  @uy-steps-head-inner-border-color:  green;
+}   
+
+.index() {
+  .uy-btn {
+    background:  @uy-steps-head-inner-border-color;
+  }
+} 
+
+#logo-group {
+  background: red
+}
